@@ -85,9 +85,16 @@ class Set2Form extends Component {
 
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={this.onSubmit}
+                    onPress={this.onSubmit()}
                 >
                     <Text style={styles.buttonText}>ยืนยัน</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={()=>Actions.pop()}
+                >
+                    <Text style={styles.buttonText}>ยกเลิก</Text>
                 </TouchableOpacity>
     
             </View>

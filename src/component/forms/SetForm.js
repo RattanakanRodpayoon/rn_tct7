@@ -89,6 +89,13 @@ class SetForm extends Component {
                 >
                     <Text style={styles.buttonText}>ยืนยัน</Text>
                 </TouchableOpacity>
+                
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={Actions.pop()}
+                >
+                    <Text style={styles.buttonText}>ยกเลิก</Text>
+                </TouchableOpacity>
             </View>
             
         );
