@@ -39,7 +39,10 @@ class Set2Form extends Component {
         return(
             <View style={styles.container}>
                 <Text style={styles.title1}>
-                    ตั้งค่าสถานะของฟาร์ม แปลง 2
+                    ตั้งค่าสถานะ
+                </Text>
+                <Text style={styles.title1}>
+                    ฟาร์มที่ 2
                 </Text>
 
                 <Text style={styles.title2}>
@@ -85,14 +88,14 @@ class Set2Form extends Component {
 
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={this.onSubmit()}
+                    onPress={this.onSubmit}
                 >
                     <Text style={styles.buttonText}>ยืนยัน</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={styles.button}
-                    onPress={()=>Actions.pop()}
+                    style={styles.button2}
+                    onPress={()=>Actions.main()}
                 >
                     <Text style={styles.buttonText}>ยกเลิก</Text>
                 </TouchableOpacity>
@@ -115,7 +118,7 @@ const styles = StyleSheet.create({
     },
     Text: {
         fontSize : 20,
-        marginVertical : 25,
+        marginVertical : 5,
         fontWeight : '500',
         color : '#175f17',
         padding : 10,
@@ -139,18 +142,27 @@ const styles = StyleSheet.create({
         alignItems : 'center',
         justifyContent : 'center'
     },
-    title1: {
+    title1: {  
         fontSize: 32,
         fontWeight: 'bold',
         color : '#175f17'
     },
     title2: {
-        marginVertical: 2,
+        marginVertical: 4,
         fontSize: 24,
         color : '#175f17'
     },
     buttonText: {
         color : '#ffffff',
         fontSize: 20
+    },
+    button2: {
+        marginVertical : 2,
+        backgroundColor : 'red',
+        borderRadius : 30,
+        width : 220,
+        height : 50,
+        alignItems : 'center',
+        justifyContent : 'center'
     },
 });

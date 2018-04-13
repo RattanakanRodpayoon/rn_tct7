@@ -39,7 +39,10 @@ class SetForm extends Component {
         return(
             <View style={styles.container}>
                 <Text style={styles.title1}>
-                    ตั้งค่าสถานะของฟาร์ม แปลง 1
+                    ตั้งค่าสถานะ
+                </Text>
+                <Text style={styles.title1}>
+                    ฟาร์มที่ 1
                 </Text>
 
                 <Text style={styles.title2}>
@@ -89,10 +92,10 @@ class SetForm extends Component {
                 >
                     <Text style={styles.buttonText}>ยืนยัน</Text>
                 </TouchableOpacity>
-                
+
                 <TouchableOpacity
-                    style={styles.button}
-                    onPress={Actions.pop()}
+                    style={styles.button2}
+                    onPress={()=>Actions.pop()}
                 >
                     <Text style={styles.buttonText}>ยกเลิก</Text>
                 </TouchableOpacity>
@@ -144,7 +147,7 @@ const styles = StyleSheet.create({
         color : '#175f17'
     },
     title2: {
-        marginVertical: 2,
+        marginVertical: 4,
         fontSize: 24,
         color : '#175f17'
     },
@@ -152,8 +155,13 @@ const styles = StyleSheet.create({
         color : '#ffffff',
         fontSize: 20
     },
-    buttonText2: {
-        color : '#175f17',
-        fontSize: 20
+    button2: {
+        marginVertical : 2,
+        backgroundColor : 'red',
+        borderRadius : 30,
+        width : 220,
+        height : 50,
+        alignItems : 'center',
+        justifyContent : 'center'
     },
 });

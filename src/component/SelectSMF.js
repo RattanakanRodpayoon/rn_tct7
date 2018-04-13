@@ -97,16 +97,22 @@ class SelectSMF extends Component {
                     </Text>
 
                     <Text style={styles.Text}>
-                        แปลง 1 : ความชื้นในดิน : {this.state.moist}%
+                        ฟาร์มที่ 1 : ความชื้นในดิน : {this.state.moist}%
                     </Text>
                     <Text style={styles.Text}>
-                        แปลง 2 : ความชื้นในดิน :  {this.state.moist2}%
+                        ฟาร์มที่ 2 : ความชื้นในดิน :  {this.state.moist2}%
                     </Text>
                     <Text style={styles.Text}>
-                        เวลารดน้ำ {this.state.waterhr} : {this.state.watermin} น.
+                        เวลารดน้ำฟาร์มที่ 1 : [ {this.state.waterhr} : {this.state.watermin} ] น.
                     </Text>
                     <Text style={styles.Text}>
-                        รดปุ๋ยทุก {this.state.datepui} วัน
+                        เวลารดน้ำฟาร์มที่ 2 : [ {this.state.waterhr} : {this.state.watermin} ] น.
+                    </Text>
+                    <Text style={styles.Text}>
+                        รดปุ๋ยทุกฟาร์มที่ 1 : [ {this.state.datepui} ] วัน
+                    </Text>
+                    <Text style={styles.Text}>
+                        รดปุ๋ยทุกฟาร์มที่ 2 : [ {this.state.datepui} ] วัน
                     </Text>
                     <TouchableOpacity
                         style={styles.button}
@@ -144,7 +150,7 @@ const styles = StyleSheet.create({
     },
     Text: {
         fontSize : 20,
-        marginVertical : 10,
+        marginVertical : 2,
         fontWeight : '500',
         color : 'black',
         padding : 10,
