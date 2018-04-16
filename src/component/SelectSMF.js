@@ -20,6 +20,9 @@ class SelectSMF extends Component {
         this.hr = Firebase.database().ref().child('Setting/TimeWater/hr');
         this.min = Firebase.database().ref().child('Setting/TimeWater/min');
         this.date = Firebase.database().ref().child('Setting/Timepui/datepui');
+        this.hr2 = Firebase.database().ref().child('Setting2/TimeWater/hr');
+        this.min2 = Firebase.database().ref().child('Setting2/TimeWater/min');
+        this.date2 = Firebase.database().ref().child('Setting2/Timepui/datepui');
         this.state = {
             temp : '',
             moist : '',
@@ -27,6 +30,9 @@ class SelectSMF extends Component {
             waterhr : null,
             watermin : null,
             datepui : null,
+            waterhr2 : null,
+            watermin2 : null,
+            datepui2 : null,
             
         };
     }
@@ -59,6 +65,22 @@ class SelectSMF extends Component {
         this.date.on('value',snap => {
             this.setState({ 
                 datepui : snap.val() 
+            });
+        });
+
+        this.hr2.on('value',snap => {
+            this.setState({ 
+                waterhr2 : snap.val() 
+            });
+        });
+        this.min2.on('value',snap => {
+            this.setState({ 
+                watermin2 : snap.val() 
+            });
+        });
+        this.date2.on('value',snap => {
+            this.setState({ 
+                datepui2 : snap.val() 
             });
         });
     }
@@ -106,13 +128,13 @@ class SelectSMF extends Component {
                         เวลารดน้ำฟาร์มที่ 1 : [ {this.state.waterhr} : {this.state.watermin} ] น.
                     </Text>
                     <Text style={styles.Text}>
-                        เวลารดน้ำฟาร์มที่ 2 : [ {this.state.waterhr} : {this.state.watermin} ] น.
+                        เวลารดน้ำฟาร์มที่ 2 : [ {this.state.waterhr2} : {this.state.watermin2} ] น.
                     </Text>
                     <Text style={styles.Text}>
                         รดปุ๋ยทุกฟาร์มที่ 1 : [ {this.state.datepui} ] วัน
                     </Text>
                     <Text style={styles.Text}>
-                        รดปุ๋ยทุกฟาร์มที่ 2 : [ {this.state.datepui} ] วัน
+                        รดปุ๋ยทุกฟาร์มที่ 2 : [ {this.state.datepui2} ] วัน
                     </Text>
                     <TouchableOpacity
                         style={styles.button}
